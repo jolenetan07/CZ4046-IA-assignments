@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-public class ThreePrisonersDilemma {
+public class ThreePrisonersDilemma_all {
 
 	/*
 	 This Java program models the two-player Prisoner's Dilemma game.
@@ -1140,7 +1140,7 @@ public class ThreePrisonersDilemma {
         boolean VERBOSE = false; // set verbose = false if you get too much text output
         int val;
 
-        ThreePrisonersDilemma instance = new ThreePrisonersDilemma();
+        ThreePrisonersDilemma_all instance = new ThreePrisonersDilemma_all();
         LinkedHashMap<Integer, Integer> hashMap = new LinkedHashMap<>(); // To store player's cumulative rankings.
         for (int player = 0; player < NUM_PLAYERS; player++)
             hashMap.put(player, 0); // initialize player's cumulative ranking to 0.
