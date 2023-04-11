@@ -1,0 +1,266 @@
+Experiment Results ::
+* 100 rounds
+
+[Experiment 1] 1 of each given agent
+
+Tournament Results
+[Player 3] TolerantPlayer: 132.96529037314656 points.
+[Player 5] T4TPlayer: 124.52180985873478 points.
+[Player 4] FreakyPlayer: 120.40732056643996 points.
+[Player 0] NicePlayer: 115.9647533582395 points.
+[Player 2] RandomPlayer: 114.38912308800977 points.
+[Player 1] NastyPlayer: 113.97901676776766 points.
+
+Tournament Results
+[Player 5] T4TPlayer: 125.37896540841876 points.
+[Player 4] FreakyPlayer: 123.83170517791304 points.
+[Player 3] TolerantPlayer: 118.52485624879561 points.
+[Player 0] NicePlayer: 115.26309972706899 points.
+[Player 1] NastyPlayer: 113.0986808060215 points.
+[Player 2] RandomPlayer: 106.00848011518777 points.
+
+Summed up rankings for Players 0 to 6 : 
+{3=192, 5=229, 4=395, 1=408, 0=425, 2=451}
+
+Average rankings :                                               
+{3=1.92, 5=2.29, 4=3.95, 1=4.08, 0=4.25, 2=4.51}
+
+
+[Experiment 2] 1 of each given agent + 1 of each additional agent
+
+Tournament Results
+[Player 9] GTPlayer: 558.6331512371484 points.
+[Player 7] HardT4TPlayer: 557.8391758484769 points.
+[Player 3] TolerantPlayer: 556.0470775265671 points.
+[Player 5] T4TPlayer: 536.2137993643502 points.
+[Player 8] PPlayer: 522.4260987270826 points.
+[Player 6] SoftT4TPlayer: 521.7817108208098 points.
+[Player 11] GT4TPlayer: 506.7422418204053 points.
+[Player 1] NastyPlayer: 506.2450872984729 points.
+[Player 10] FT4TPlayer: 505.3921489444256 points.
+[Player 4] FreakyPlayer: 501.78069922060223 points.
+[Player 0] NicePlayer: 488.8299265287935 points.
+[Player 13] GPlayer: 478.6214625597209 points.
+[Player 2] RandomPlayer: 471.4559340957113 points.
+[Player 12] AT4TPlayer: 459.90283260975923 points.
+
+Tournament Results
+[Player 7] HardT4TPlayer: 577.5598219111235 points.
+[Player 9] GTPlayer: 564.1626808711699 points.
+[Player 3] TolerantPlayer: 554.8793630812545 points.
+[Player 8] PPlayer: 531.5068498779889 points.
+[Player 5] T4TPlayer: 524.2382785061944 points.
+[Player 6] SoftT4TPlayer: 522.3243316352109 points.
+[Player 4] FreakyPlayer: 511.76160680586446 points.
+[Player 10] FT4TPlayer: 510.6933841839416 points.
+[Player 1] NastyPlayer: 508.3597906404889 points.
+[Player 11] GT4TPlayer: 504.64224292811474 points.
+[Player 0] NicePlayer: 503.93679323653015 points.
+[Player 2] RandomPlayer: 476.22404953724225 points.
+[Player 13] GPlayer: 475.4838674088346 points.
+[Player 12] AT4TPlayer: 464.1436089220976 points.
+
+Summed up rankings for Players 0 to 14 : 
+{9=140, 7=198, 3=263, 5=426, 8=550, 6=570, 10=713, 4=915, 1=927, 0=952, 11=987, 2=1250, 13=1279, 12=1330}
+
+Average rankings :                                               
+{9=1.4, 7=1.98, 3=2.63, 5=4.26, 8=5.5, 6=5.7, 10=7.13, 4=9.15, 1=9.27, 0=9.52, 11=9.87, 2=12.5, 13=12.79, 12=13.3}
+
+
+[Experiment 3] 1 of each given agent + 1 of each additional agent + my agent
+
+Tournament Results
+[Player 0] Jolene_Tan_Player: 651.1168354899646 points.
+[Player 10] GTPlayer: 642.8914706881249 points.
+[Player 8] HardT4TPlayer: 635.0190100012212 points.
+[Player 4] TolerantPlayer: 633.1507315149615 points.
+[Player 6] T4TPlayer: 617.2679144297636 points.
+[Player 7] SoftT4TPlayer: 593.6364273439408 points.
+[Player 9] PPlayer: 586.8675253376628 points.
+[Player 11] FT4TPlayer: 586.6716219913541 points.
+[Player 1] NicePlayer: 577.4751457003456 points.
+[Player 5] FreakyPlayer: 549.5744897730347 points.
+[Player 14] GPlayer: 544.2721375902426 points.
+[Player 2] NastyPlayer: 544.2046721211976 points.
+[Player 12] GT4TPlayer: 529.3661566947734 points.
+[Player 3] RandomPlayer: 526.2966574178454 points.
+[Player 13] AT4TPlayer: 510.3497479466787 points.
+
+Tournament Results
+[Player 0] Jolene_Tan_Player: 651.8930984140137 points.
+[Player 10] GTPlayer: 647.8208386579844 points.
+[Player 4] TolerantPlayer: 644.7079116346995 points.
+[Player 8] HardT4TPlayer: 642.4846163730045 points.
+[Player 6] T4TPlayer: 620.5996017519437 points.
+[Player 9] PPlayer: 608.8493192904556 points.
+[Player 7] SoftT4TPlayer: 600.7673753865212 points.
+[Player 11] FT4TPlayer: 581.5565185709353 points.
+[Player 1] NicePlayer: 560.6780117376209 points.
+[Player 5] FreakyPlayer: 549.7241560033531 points.
+[Player 14] GPlayer: 549.2436241067878 points.
+[Player 2] NastyPlayer: 543.6241196051902 points.
+[Player 12] GT4TPlayer: 531.7231861496484 points.
+[Player 13] AT4TPlayer: 523.5679069312268 points.
+[Player 3] RandomPlayer: 507.2185981117797 points.
+
+Summed up rankings for Players 0 to 15 : 
+{0=118, 10=234, 8=284, 4=367, 6=510, 7=639, 9=692, 11=758, 1=935, 5=1043, 14=1108, 2=1180, 12=1295, 3=1355, 13=1482}
+
+Average rankings :                                               
+{0=1.18, 10=2.34, 8=2.84, 4=3.67, 6=5.1, 7=6.39, 9=6.92, 11=7.58, 1=9.35, 5=10.43, 14=11.08, 2=11.8, 12=12.95, 3=13.55, 13=14.82}
+
+
+[Experiment 4] 5 of each given agent + 5 of each additional agent + my agent
+
+Tournament Results
+[Player 0] Jolene_Tan_Player: 12562.047243285046 points.
+[Player 66] GTPlayer: 12231.917682472127 points.
+[Player 8] HardT4TPlayer: 12227.300710282148 points.
+[Player 38] GTPlayer: 12226.227063989561 points.
+[Player 10] GTPlayer: 12215.153718100219 points.
+[Player 64] HardT4TPlayer: 12205.185595311648 points.
+[Player 24] GTPlayer: 12200.92145498601 points.
+[Player 52] GTPlayer: 12187.115629127224 points.
+[Player 50] HardT4TPlayer: 12168.143864961105 points.
+[Player 22] HardT4TPlayer: 12158.436056350492 points.
+[Player 36] HardT4TPlayer: 12156.89379203311 points.
+[Player 46] TolerantPlayer: 11977.672576380635 points.
+[Player 60] TolerantPlayer: 11968.04255445381 points.
+[Player 4] TolerantPlayer: 11960.844970907798 points.
+[Player 18] TolerantPlayer: 11944.276446192222 points.
+[Player 32] TolerantPlayer: 11926.605975992426 points.
+[Player 48] T4TPlayer: 11619.45917921568 points.
+[Player 20] T4TPlayer: 11611.752367115858 points.
+[Player 62] T4TPlayer: 11605.367867645156 points.
+[Player 6] T4TPlayer: 11593.147515481121 points.
+[Player 34] T4TPlayer: 11540.392103110873 points.
+[Player 23] PPlayer: 11298.341063317977 points.
+[Player 65] PPlayer: 11263.10469998331 points.
+[Player 21] SoftT4TPlayer: 11260.011874560463 points.
+[Player 9] PPlayer: 11259.277698629481 points.
+[Player 51] PPlayer: 11243.587905966951 points.
+[Player 35] SoftT4TPlayer: 11227.71295281596 points.
+[Player 7] SoftT4TPlayer: 11222.958729047075 points.
+[Player 37] PPlayer: 11214.21269305279 points.
+[Player 58] NastyPlayer: 11197.65049768751 points.
+[Player 49] SoftT4TPlayer: 11194.234409407201 points.
+[Player 63] SoftT4TPlayer: 11175.543951456115 points.
+[Player 2] NastyPlayer: 11170.725219029267 points.
+[Player 16] NastyPlayer: 11165.773262216291 points.
+[Player 30] NastyPlayer: 11143.975265597803 points.
+[Player 44] NastyPlayer: 11134.292889451552 points.
+[Player 11] FT4TPlayer: 11072.14736362686 points.
+[Player 67] FT4TPlayer: 11044.948959574429 points.
+[Player 39] FT4TPlayer: 11041.461414167185 points.
+[Player 25] FT4TPlayer: 11025.561561326896 points.
+[Player 53] FT4TPlayer: 11020.00723658919 points.
+[Player 5] FreakyPlayer: 10957.42575872903 points.
+[Player 19] FreakyPlayer: 10920.732034048635 points.
+[Player 61] FreakyPlayer: 10912.6671524135 points.
+[Player 33] FreakyPlayer: 10893.35507551772 points.
+[Player 47] FreakyPlayer: 10860.665928803059 points.
+[Player 54] GT4TPlayer: 10791.242421041832 points.
+[Player 68] GT4TPlayer: 10786.718456390809 points.
+[Player 12] GT4TPlayer: 10785.431816323287 points.
+[Player 26] GT4TPlayer: 10784.091819264562 points.
+[Player 40] GT4TPlayer: 10724.361709827068 points.
+[Player 42] GPlayer: 10641.16200608252 points.
+[Player 1] NicePlayer: 10618.06507831782 points.
+[Player 28] GPlayer: 10608.18852848909 points.
+[Player 14] GPlayer: 10604.319751029587 points.
+[Player 70] GPlayer: 10599.055600953674 points.
+[Player 57] NicePlayer: 10573.943540973865 points.
+[Player 15] NicePlayer: 10564.551386550602 points.
+[Player 43] NicePlayer: 10556.148227004236 points.
+[Player 29] NicePlayer: 10546.924714287288 points.
+[Player 56] GPlayer: 10523.303853744104 points.
+[Player 17] RandomPlayer: 10369.936880865142 points.
+[Player 3] RandomPlayer: 10358.058729318727 points.
+[Player 31] RandomPlayer: 10297.996918313323 points.
+[Player 59] RandomPlayer: 10268.28883019542 points.
+[Player 45] RandomPlayer: 10172.226585354389 points.
+[Player 13] AT4TPlayer: 10082.590202807289 points.
+[Player 27] AT4TPlayer: 10070.240810514666 points.
+[Player 55] AT4TPlayer: 10022.743475268955 points.
+[Player 41] AT4TPlayer: 9989.453907616433 points.
+[Player 69] AT4TPlayer: 9984.385714678281 points.
+
+Tournament Results
+[Player 0] Jolene_Tan_Player: 12551.070003054572 points.
+[Player 24] GTPlayer: 12270.370602389412 points.
+[Player 52] GTPlayer: 12264.479500515139 points.
+[Player 66] GTPlayer: 12246.45192188462 points.
+[Player 10] GTPlayer: 12196.87586813498 points.
+[Player 38] GTPlayer: 12194.889350616399 points.
+[Player 64] HardT4TPlayer: 12175.771393387611 points.
+[Player 22] HardT4TPlayer: 12162.924876671623 points.
+[Player 8] HardT4TPlayer: 12138.182217242022 points.
+[Player 50] HardT4TPlayer: 12127.39734962202 points.
+[Player 36] HardT4TPlayer: 12090.157151318817 points.
+[Player 32] TolerantPlayer: 11991.127398250006 points.
+[Player 46] TolerantPlayer: 11985.28781497303 points.
+[Player 60] TolerantPlayer: 11961.729928269198 points.
+[Player 4] TolerantPlayer: 11956.617211437855 points.
+[Player 18] TolerantPlayer: 11914.969671732506 points.
+[Player 62] T4TPlayer: 11590.311756775558 points.
+[Player 20] T4TPlayer: 11567.314211969871 points.
+[Player 6] T4TPlayer: 11564.071800305757 points.
+[Player 48] T4TPlayer: 11538.2095491336 points.
+[Player 34] T4TPlayer: 11533.6394810391 points.
+[Player 9] PPlayer: 11336.13400247713 points.
+[Player 37] PPlayer: 11325.309670568353 points.
+[Player 51] PPlayer: 11316.112506891493 points.
+[Player 23] PPlayer: 11287.670120269564 points.
+[Player 65] PPlayer: 11286.030809658081 points.
+[Player 7] SoftT4TPlayer: 11247.147343220488 points.
+[Player 35] SoftT4TPlayer: 11227.439409640203 points.
+[Player 30] NastyPlayer: 11214.041083627173 points.
+[Player 21] SoftT4TPlayer: 11207.710458424832 points.
+[Player 49] SoftT4TPlayer: 11204.372138105213 points.
+[Player 63] SoftT4TPlayer: 11204.169015832656 points.
+[Player 44] NastyPlayer: 11189.367788023776 points.
+[Player 2] NastyPlayer: 11183.201601058348 points.
+[Player 16] NastyPlayer: 11116.892774950265 points.
+[Player 25] FT4TPlayer: 11072.356307424592 points.
+[Player 58] NastyPlayer: 11071.102229158263 points.
+[Player 11] FT4TPlayer: 11069.693043675134 points.
+[Player 39] FT4TPlayer: 11015.327354669711 points.
+[Player 53] FT4TPlayer: 10994.338233125984 points.
+[Player 67] FT4TPlayer: 10982.789613268844 points.
+[Player 61] FreakyPlayer: 10879.90666718614 points.
+[Player 5] FreakyPlayer: 10863.956900738525 points.
+[Player 33] FreakyPlayer: 10842.920279370801 points.
+[Player 54] GT4TPlayer: 10832.97036407446 points.
+[Player 68] GT4TPlayer: 10794.940607942252 points.
+[Player 19] FreakyPlayer: 10787.84477598488 points.
+[Player 26] GT4TPlayer: 10784.135970996776 points.
+[Player 47] FreakyPlayer: 10761.44854331023 points.
+[Player 12] GT4TPlayer: 10742.924851117445 points.
+[Player 40] GT4TPlayer: 10728.467893773466 points.
+[Player 42] GPlayer: 10651.208068432026 points.
+[Player 14] GPlayer: 10639.226217710828 points.
+[Player 43] NicePlayer: 10595.15912548636 points.
+[Player 70] GPlayer: 10593.628324088993 points.
+[Player 28] GPlayer: 10591.450271130725 points.
+[Player 56] GPlayer: 10585.94052150204 points.
+[Player 1] NicePlayer: 10582.632970740733 points.
+[Player 29] NicePlayer: 10570.193189677779 points.
+[Player 15] NicePlayer: 10563.911906402485 points.
+[Player 57] NicePlayer: 10553.507538972317 points.
+[Player 31] RandomPlayer: 10332.822648061388 points.
+[Player 45] RandomPlayer: 10265.036248549724 points.
+[Player 3] RandomPlayer: 10258.699596861996 points.
+[Player 59] RandomPlayer: 10233.703307802789 points.
+[Player 17] RandomPlayer: 10223.817216353584 points.
+[Player 41] AT4TPlayer: 10156.37270349572 points.
+[Player 55] AT4TPlayer: 10086.6288927584 points.
+[Player 27] AT4TPlayer: 10037.736935236906 points.
+[Player 13] AT4TPlayer: 9985.610156656652 points.
+[Player 69] AT4TPlayer: 9967.665202724977 points.
+
+Summed up rankings for Players 0 to 71 : 
+{0=100, 10=456, 38=461, 52=462, 24=468, 66=477, 22=782, 64=819, 36=852, 8=856, 50=867, 46=1368, 18=1383, 32=1413, 60=1417, 4=1419, 20=1866, 62=1886, 48=1893, 34=1927, 6=1928, 65=2464, 23=2484, 37=2487, 9=2490, 51=2503, 35=2890, 49=2890, 21=2916, 63=2927, 7=2936, 44=3265, 2=3295, 58=3302, 30=3309, 16=3355, 39=3894, 67=3899, 53=3901, 25=3912, 11=3940, 5=4413, 19=4431, 47=4450, 33=4483, 61=4500, 26=4819, 68=4825, 12=4833, 54=4841, 40=4858, 14=5461, 70=5461, 42=5468, 28=5481, 56=5489, 15=5787, 1=5817, 43=5831, 57=5842, 29=5851, 59=6368, 17=6397, 31=6408, 3=6410, 45=6417, 55=6873, 41=6897, 69=6904, 13=6905, 27=6921}
+
+Average rankings :                                               
+{0=1.0, 10=4.56, 38=4.61, 52=4.62, 24=4.68, 66=4.77, 22=7.82, 64=8.19, 36=8.52, 8=8.56, 50=8.67, 46=13.68, 18=13.83, 32=14.13, 60=14.17, 4=14.19, 20=18.66, 62=18.86, 48=18.93, 34=19.27, 6=19.28, 65=24.64, 23=24.84, 37=24.87, 9=24.9, 51=25.03, 35=28.9, 49=28.9, 21=29.16, 63=29.27, 7=29.36, 44=32.65, 2=32.95, 58=33.02, 30=33.09, 16=33.55, 39=38.94, 67=38.99, 53=39.01, 25=39.12, 11=39.4, 5=44.13, 19=44.31, 47=44.5, 33=44.83, 61=45.0, 26=48.19, 68=48.25, 12=48.33, 54=48.41, 40=48.58, 14=54.61, 70=54.61, 42=54.68, 28=54.81, 56=54.89, 15=57.87, 1=58.17, 43=58.31, 57=58.42, 29=58.51, 59=63.68, 17=63.97, 31=64.08, 3=64.1, 45=64.17, 55=68.73, 41=68.97, 69=69.04, 13=69.05, 27=69.21}
+
