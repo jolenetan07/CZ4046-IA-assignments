@@ -157,18 +157,6 @@ public class ThreePrisonersDilemma_clean {
         }
     }
 
-	class GTPlayer extends Player {
-		// defect for subsequent rounds if both opponents defected in the previous round
-		// 'grim trigger' strategy
-		boolean triggered = false;
-		int selectAction(int n, int[] myHistory, int[] oppHistory1, int[] oppHistory2) {
-			if (n==0) return 0;
-			if (oppHistory1[n-1] + oppHistory2[n-1] == 2) triggered = true;
-			if (triggered) return 1;
-			return 0;
-		}
-	}
-
 	class FT4TPlayer extends Player {
 		// picks a random opponent at each round
 		// if opponent defected >=10 times, player retaliates with defect
@@ -268,6 +256,18 @@ public class ThreePrisonersDilemma_clean {
 			}
         }
     }
+
+    class GTPlayer extends Player {
+		// defect for subsequent rounds if both opponents defected in the previous round
+		// 'grim trigger' strategy
+		boolean triggered = false;
+		int selectAction(int n, int[] myHistory, int[] oppHistory1, int[] oppHistory2) {
+			if (n==0) return 0;
+			if (oppHistory1[n-1] + oppHistory2[n-1] == 2) triggered = true;
+			if (triggered) return 1;
+			return 0;
+		}
+	}
 
 	class GPlayer extends Player {
         // picks a random opponent at each round
@@ -544,19 +544,92 @@ public class ThreePrisonersDilemma_clean {
 			case 12: return new GT4TPlayer();
 			case 13: return new AT4TPlayer();
 			case 14: return new GPlayer();
+
+            // clone 2
+			// given agents
+            case 15: return new NicePlayer();
+            case 16: return new NastyPlayer();
+            case 17: return new RandomPlayer();
+            case 18: return new TolerantPlayer();
+            case 19: return new FreakyPlayer();
+            case 20: return new T4TPlayer();
+            // additional agents
+            case 21: return new SoftT4TPlayer();
+			case 22: return new HardT4TPlayer();
+            case 23: return new PPlayer();
+            case 24: return new GTPlayer();
+			case 25: return new FT4TPlayer();
+			case 26: return new GT4TPlayer();
+			case 27: return new AT4TPlayer();
+			case 28: return new GPlayer();
+
+            // clone 3
+			// given agents
+            case 29: return new NicePlayer();
+            case 30: return new NastyPlayer();
+            case 31: return new RandomPlayer();
+            case 32: return new TolerantPlayer();
+            case 33: return new FreakyPlayer();
+            case 34: return new T4TPlayer();
+            // additional agents
+            case 35: return new SoftT4TPlayer();
+			case 36: return new HardT4TPlayer();
+            case 37: return new PPlayer();
+            case 38: return new GTPlayer();
+			case 39: return new FT4TPlayer();
+			case 40: return new GT4TPlayer();
+			case 41: return new AT4TPlayer();
+			case 42: return new GPlayer();
+
+            // clone 4
+			// given agents
+            case 43: return new NicePlayer();
+            case 44: return new NastyPlayer();
+            case 45: return new RandomPlayer();
+            case 46: return new TolerantPlayer();
+            case 47: return new FreakyPlayer();
+            case 48: return new T4TPlayer();
+            // additional agents
+            case 49: return new SoftT4TPlayer();
+			case 50: return new HardT4TPlayer();
+            case 51: return new PPlayer();
+            case 52: return new GTPlayer();
+			case 53: return new FT4TPlayer();
+			case 54: return new GT4TPlayer();
+			case 55: return new AT4TPlayer();
+			case 56: return new GPlayer();
+
+            // clone 5
+			// given agents
+            case 57: return new NicePlayer();
+            case 58: return new NastyPlayer();
+            case 59: return new RandomPlayer();
+            case 60: return new TolerantPlayer();
+            case 61: return new FreakyPlayer();
+            case 62: return new T4TPlayer();
+            // additional agents
+            case 63: return new SoftT4TPlayer();
+			case 64: return new HardT4TPlayer();
+            case 65: return new PPlayer();
+            case 66: return new GTPlayer();
+			case 67: return new FT4TPlayer();
+			case 68: return new GT4TPlayer();
+			case 69: return new AT4TPlayer();
+			case 70: return new GPlayer();
         }
         throw new RuntimeException("Bad argument passed to makePlayer");
     }
 
     /* Modified main to run tournament rounds */
     public static void main (String[] args) {
-		int TOURNAMENT_ROUNDS = 100; // change
-		int NUM_PLAYERS = 15; // change
+		int TOURNAMENT_ROUNDS = 100; 
+        //int NUM_PLAYERS = 15; // match w 1 of each player
+		int NUM_PLAYERS = 71; // match w 5 of each player
         boolean PRINT_TOP_3 = false;
         boolean VERBOSE = false; // set verbose = false if you get too much text output
         int val;
 
-        ThreePrisonersDilemma_all instance = new ThreePrisonersDilemma_all();
+        ThreePrisonersDilemma_clean instance = new ThreePrisonersDilemma_clean();
         LinkedHashMap<Integer, Integer> hashMap = new LinkedHashMap<>(); // To store player's cumulative rankings.
         for (int player = 0; player < NUM_PLAYERS; player++)
             hashMap.put(player, 0); // initialize player's cumulative ranking to 0.
