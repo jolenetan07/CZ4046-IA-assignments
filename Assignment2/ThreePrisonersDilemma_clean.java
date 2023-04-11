@@ -526,6 +526,51 @@ public class ThreePrisonersDilemma_clean {
 
     Player makePlayer(int which) {
         switch (which) {
+            /* experiment 1 */
+            // given agents
+            case 0: return new NicePlayer();
+            case 1: return new NastyPlayer();
+            case 2: return new RandomPlayer();
+            case 3: return new TolerantPlayer();
+            case 4: return new FreakyPlayer();
+            case 5: return new T4TPlayer();
+
+            
+            /* experiment 2 
+            case 0: return new SoftT4TPlayer();
+			case 1: return new HardT4TPlayer();
+            case 2: return new PPlayer();
+            case 3: return new GTPlayer();
+			case 4: return new FT4TPlayer();
+			case 5: return new GT4TPlayer();
+			case 6: return new AT4TPlayer();
+			case 7: return new GPlayer();
+            */
+
+
+            /* experiment 3
+            // my agent
+            case 0: return new Jolene_Tan_Player();
+			// given agents
+            case 1: return new NicePlayer();
+            case 2: return new NastyPlayer();
+            case 3: return new RandomPlayer();
+            case 4: return new TolerantPlayer();
+            case 5: return new FreakyPlayer();
+            case 6: return new T4TPlayer();
+            // additional agents
+            case 7: return new SoftT4TPlayer();
+			case 8: return new HardT4TPlayer();
+            case 9: return new PPlayer();
+            case 10: return new GTPlayer();
+			case 11: return new FT4TPlayer();
+			case 12: return new GT4TPlayer();
+			case 13: return new AT4TPlayer();
+			case 14: return new GPlayer();
+            */
+
+
+            /* experiment 4
 			// my agent
             case 0: return new Jolene_Tan_Player();
 			// given agents
@@ -616,6 +661,7 @@ public class ThreePrisonersDilemma_clean {
 			case 68: return new GT4TPlayer();
 			case 69: return new AT4TPlayer();
 			case 70: return new GPlayer();
+            */
         }
         throw new RuntimeException("Bad argument passed to makePlayer");
     }
@@ -623,8 +669,10 @@ public class ThreePrisonersDilemma_clean {
     /* Modified main to run tournament rounds */
     public static void main (String[] args) {
 		int TOURNAMENT_ROUNDS = 100; 
-        //int NUM_PLAYERS = 15; // match w 1 of each player
-		int NUM_PLAYERS = 71; // match w 5 of each player
+        int NUM_PLAYERS = 6; // experiment 1
+        //int NUM_PLAYERS = 8; // experiment 2
+        //int NUM_PLAYERS = 15; // experiment 3
+        //int NUM_PLAYERS = 71; // experiment 4
         boolean PRINT_TOP_3 = false;
         boolean VERBOSE = false; // set verbose = false if you get too much text output
         int val;
