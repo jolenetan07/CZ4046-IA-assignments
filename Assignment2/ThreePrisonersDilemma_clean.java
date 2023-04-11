@@ -189,10 +189,9 @@ public class ThreePrisonersDilemma_clean {
 	}
 
 	class GT4TPlayer extends Player {
-        // picks a random opponent at each round,
+        // picks a random opponent at each round
 		// if opponent cooperated in previous round, increase cooperation probability by 0.1
 		// else decrease cooperation probability by 0.1
-		// player's next move determined by generating random number
 		// if random number < cooperation probability, cooperate 
 		// else defect
         // 'generous tit-for-tat' strategy
@@ -212,9 +211,7 @@ public class ThreePrisonersDilemma_clean {
 						cooperationProb = 0.5;
 					}
 				}
-				if (Math.random() < cooperationProb) {
-					return 1;
-				}
+				if (Math.random() < cooperationProb) return 1;
 				return 0;
 			} else {
 				if (oppHistory2[n-1] == 0) {
@@ -228,9 +225,7 @@ public class ThreePrisonersDilemma_clean {
 						cooperationProb = 0.5;
 					}
 				}
-				if (Math.random() < cooperationProb) {
-					return 1;
-				}
+				if (Math.random() < cooperationProb) return 1;
 				return 0;
 			}
         }
@@ -526,7 +521,7 @@ public class ThreePrisonersDilemma_clean {
 
     Player makePlayer(int which) {
         switch (which) {
-            /* experiment 1 */
+            /* experiment 1 
             // given agents
             case 0: return new NicePlayer();
             case 1: return new NastyPlayer();
@@ -534,21 +529,28 @@ public class ThreePrisonersDilemma_clean {
             case 3: return new TolerantPlayer();
             case 4: return new FreakyPlayer();
             case 5: return new T4TPlayer();
-
-            
-            /* experiment 2 
-            case 0: return new SoftT4TPlayer();
-			case 1: return new HardT4TPlayer();
-            case 2: return new PPlayer();
-            case 3: return new GTPlayer();
-			case 4: return new FT4TPlayer();
-			case 5: return new GT4TPlayer();
-			case 6: return new AT4TPlayer();
-			case 7: return new GPlayer();
             */
 
 
-            /* experiment 3
+            /* experiment 2
+            case 0: return new NicePlayer();
+            case 1: return new NastyPlayer();
+            case 2: return new RandomPlayer();
+            case 3: return new TolerantPlayer();
+            case 4: return new FreakyPlayer();
+            case 5: return new T4TPlayer();
+            case 6: return new SoftT4TPlayer();
+			case 7: return new HardT4TPlayer();
+            case 8: return new PPlayer();
+            case 9: return new GTPlayer();
+			case 10: return new FT4TPlayer();
+			case 11: return new GT4TPlayer();
+			case 12: return new AT4TPlayer();
+			case 13: return new GPlayer();
+            */
+            
+
+            /* experiment 3 
             // my agent
             case 0: return new Jolene_Tan_Player();
 			// given agents
@@ -570,7 +572,7 @@ public class ThreePrisonersDilemma_clean {
             */
 
 
-            /* experiment 4
+            /* experiment 4 */
 			// my agent
             case 0: return new Jolene_Tan_Player();
 			// given agents
@@ -661,7 +663,7 @@ public class ThreePrisonersDilemma_clean {
 			case 68: return new GT4TPlayer();
 			case 69: return new AT4TPlayer();
 			case 70: return new GPlayer();
-            */
+            
         }
         throw new RuntimeException("Bad argument passed to makePlayer");
     }
@@ -669,10 +671,10 @@ public class ThreePrisonersDilemma_clean {
     /* Modified main to run tournament rounds */
     public static void main (String[] args) {
 		int TOURNAMENT_ROUNDS = 100; 
-        int NUM_PLAYERS = 6; // experiment 1
-        //int NUM_PLAYERS = 8; // experiment 2
+        //int NUM_PLAYERS = 6; // experiment 1
+        //int NUM_PLAYERS = 14; // experiment 2
         //int NUM_PLAYERS = 15; // experiment 3
-        //int NUM_PLAYERS = 71; // experiment 4
+        int NUM_PLAYERS = 71; // experiment 4
         boolean PRINT_TOP_3 = false;
         boolean VERBOSE = false; // set verbose = false if you get too much text output
         int val;
