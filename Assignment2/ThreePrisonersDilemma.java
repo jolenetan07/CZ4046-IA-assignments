@@ -1,4 +1,4 @@
-public class ThreePrisonersDilemma_initial {
+public class ThreePrisonersDilemma {
 	
 	/* 
 	 This Java program models the two-player Prisoner's Dilemma game.
@@ -178,7 +178,7 @@ public class ThreePrisonersDilemma_initial {
 	/* Finally, the remaining code actually runs the tournament. */
 	
 	public static void main (String[] args) {
-		ThreePrisonersDilemma_initial instance = new ThreePrisonersDilemma_initial();
+		ThreePrisonersDilemma instance = new ThreePrisonersDilemma();
 		instance.runTournament();
 	}
 	
