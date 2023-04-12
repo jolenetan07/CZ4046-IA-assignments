@@ -6,134 +6,122 @@ public class Tan_Jolene_Player extends Player {
 		{{8,5},  //payoffs when first player defects, second coops
 	     {5,2}}};//payoffs when first and second players defect
 	
-	private int opp1Defects = 0;
-	private int opp2Defects = 0;
+	private int oppDef1 = 0;
+	private int oppDef2 = 0;
 	
 	int selectAction(int n, int[] myHistory, int[] oppHistory1, int[] oppHistory2) {
-		// cooperate if this is the first round
-		if (n == 0)
-			return 0;
+		// cooperate if first round
+		if (n == 0) return 0;
 
 		else {
-			// find how many times each opponent has defected in the past
-			opp1Defects += oppHistory1[n - 1];
-			opp2Defects += oppHistory2[n - 1];
+			// calculate how many times each opponent previously defected
+			oppDef1 += oppHistory1[n - 1];
+			oppDef2 += oppHistory2[n - 1];
 
-			// cooperate if both opponents have mostly cooperated
-			if (opp1Defects <= n / 2 && opp2Defects <= n / 2)
-				return 0;
+			// cooperate if both opponents mostly cooperated
+			if (oppDef1 <= n / 2 && oppDef2 <= n / 2) return 0;
 
-			// defect if both opponents have mostly defected
-			if (opp1Defects > n / 2 && opp2Defects > n / 2)
-				return 1;
+			// defect if both opponents mostly defected
+			if (oppDef1 > n / 2 && oppDef2 > n / 2) return 1;
 
-			// one opponent has mostly cooperated and another has mostly defected
+			// opponents have different majority moves
 			else {
-				// find scores upto the current round
-				float[] scores = calculateScores(myHistory, oppHistory1, oppHistory2);
+				// agent's current score
+				float[] scores = calcScore(myHistory, oppHistory1, oppHistory2);
 
-				// if my agent does not have the least score, use simple majority strategy
+				// agent not worse performing - majority strategy
 				if (scores[1] < scores[0] || scores[2] < scores[0]) {
-					return switchToSimpleMajority(n, myHistory, oppHistory1, oppHistory2);
+					return switchToMajority(n, myHistory, oppHistory1, oppHistory2);
 				}
 				
-				// if my agent has the least score
+				// agent worse performing - expected utility strategy
 				else {
-					float[][] probDists = new float[2][2];
+					float[][] probDist = new float[2][2];
 
 					// find probability of each action for each opponent
-					probDists[0] = findProbabilityDist(oppHistory1);
-					probDists[1] = findProbabilityDist(oppHistory2);
+					probDist[0] = calcProbDist(oppHistory1);
+					probDist[1] = calcProbDist(oppHistory2);
 
 					// find expected utility for cooperating and defecting
-					float coopUtil = findExpectedUtility(0, probDists);
-					float defectUtil = findExpectedUtility(1, probDists);
+					float coopUtil = calcExpUtil(0, probDist);
+					float defUtil = calcExpUtil(1, probDist);
 
 					// choose action having higher expected utility
-					if (coopUtil > defectUtil)
-						return 0;
-
-					return 1;
+					if (coopUtil > defUtil) return 0;
+                    
+                    return 1;
 				}
 			}
 		}
 	}
 	
-	// simple majority strategy
-	int switchToSimpleMajority(int n, int[] myHistory, int[] oppHistory1, int[] oppHistory2) {
-		int opponentCoop1 = 0, opponentCoop2 = 0;
+	// majority strategy
+	int switchToMajority(int n, int[] myHistory, int[] oppHistory1, int[] oppHistory2) {
+		int oppCoop1 = 0, oppCoop2 = 0;
 		int predAction1, predAction2;
 
-		// find how many times each opponent has cooperated
+		// calculate how many times each opponent previously cooperated
 		for (int i = 0; i < n; i++) {
-			if (oppHistory1[i] == 0) {
-				opponentCoop1 += 1;
-			}
-			if (oppHistory2[i] == 0) {
-				opponentCoop2 += 1;
-			}
+			if (oppHistory1[i] == 0) oppCoop1 += 1;
+			if (oppHistory2[i] == 0) oppCoop2 += 1;
 		}
 
-		// predict action of opponent 1 that it as performed most of the time
-		if (opponentCoop1 > n / 2)
-			predAction1 = 0;
-		else
-			predAction1 = 1;
+		// predict action of opponent 1 
+		if (oppCoop1 > n / 2) predAction1 = 0;
+		else predAction1 = 1;
 
-		// predict action of opponent 2 that it as performed most of the time
-		if (opponentCoop2 > n / 2)
-			predAction2 = 0;
-		else
-			predAction2 = 1;
+		// predict action of opponent 2 
+		if (oppCoop2 > n / 2) predAction2 = 0;
+		else predAction2 = 1;
 
-		// choose action that maximizes the payoff for the predicted actions
+		// choose action that maximizes expected utility (payoff)
 		if (payoff[0][predAction1][predAction2] > payoff[1][predAction1][predAction2])
 			return 0;
 
 		return 1;
 	}
 
-	// calculate scores of all the players
-	float[] calculateScores(int[] myHistory, int[] oppHistory1, int[] oppHistory2) {
-		int rounds = myHistory.length;
-		float ScoreA = 0, ScoreB = 0, ScoreC = 0;
+	// calculate scores of all players
+	float[] calcScore(int[] myHistory, int[] oppHistory1, int[] oppHistory2) {
+		int numRounds = myHistory.length;
+		float score1 = 0, score2 = 0, score3 = 0;
 
-		for (int i = 0; i < rounds; i++) {
-			ScoreA = ScoreA + payoff[myHistory[i]][oppHistory1[i]][oppHistory2[i]];
-			ScoreB = ScoreB + payoff[oppHistory1[i]][oppHistory2[i]][myHistory[i]];
-			ScoreC = ScoreC + payoff[oppHistory2[i]][myHistory[i]][oppHistory1[i]];
+		for (int i = 0; i < numRounds; i++) {
+			score1 = score1 + payoff[myHistory[i]][oppHistory1[i]][oppHistory2[i]];
+			score2 = score2 + payoff[oppHistory1[i]][oppHistory2[i]][myHistory[i]];
+			score3 = score3 + payoff[oppHistory2[i]][myHistory[i]][oppHistory1[i]];
 		}
 
-		float[] result = { ScoreA / rounds, ScoreB / rounds, ScoreC / rounds };
+		float[] result = { score1 / numRounds, score2 / numRounds, score3 / numRounds };
 		return result;
 	}
 	
-	// find probability distribution of the actions for a given opponent
-	float[] findProbabilityDist(int[] history) {
+	// calculate probability distribution of actions for an opponent
+	float[] calcProbDist(int[] hist) {
 		float[] probDist = new float[2];
 
-		// count the number of times the opponent in question has cooperated or defected
-		for (int i = 0; i < history.length; i++) {
-			probDist[history[i]]++;
+		// find number of times opponent cooperated / defected
+		for (int i = 0; i < hist.length; i++) {
+			probDist[hist[i]]++;
 		}
 
-		// find probability that the opponent in question will cooperate or defect
-		probDist[0] = probDist[0] / history.length;
-		probDist[1] = probDist[1] / history.length;
+		// find probability that opponent cooperates / defects
+		probDist[0] = probDist[0] / hist.length;
+		probDist[1] = probDist[1] / hist.length;
 
 		return probDist;
 	}
 
-	// find expected utility if the agent performs a certain action
-	float findExpectedUtility(int action, float[][] probDists) {
-		float expectedUtility = 0;
+	// calculate expected utility of agent performing an action 
+	float calcExpUtil(int action, float[][] probDist) {
+		float expUtil = 0;
 
 		for (int j = 0; j < 2; j++) {
 			for (int k = 0; k < 2; k++) {
-				expectedUtility += probDists[0][j] * probDists[1][k] * payoff[action][j][k];
+				expUtil += probDist[0][j] * probDist[1][k] * payoff[action][j][k];
 			}
 		}
 
-		return expectedUtility;
+		return expUtil;
 	}
 }
